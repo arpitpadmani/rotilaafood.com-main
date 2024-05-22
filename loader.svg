@@ -1,0 +1,45 @@
+<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Define a texture pattern for the bhakhri -->
+    <pattern id="bhakhriTexture" patternUnits="userSpaceOnUse" width="10" height="10">
+      <circle cx="2" cy="2" r="0.5" fill="rgba(139,69,19,0.3)" />
+      <circle cx="8" cy="8" r="0.7" fill="rgba(139,69,19,0.4)" />
+      <circle cx="5" cy="5" r="0.6" fill="rgba(139,69,19,0.35)" />
+    </pattern>
+  </defs>
+
+  <!-- Bhakhri base shape with an uneven edge -->
+  <path d="M 50,10
+           C 35,12 20,28 20,45
+           C 20,62 35,78 50,80
+           C 65,78 80,62 80,45
+           C 80,28 65,12 50,10
+           Z"
+        fill="#F5DEB3" stroke="#D2B48C" stroke-width="1" />
+
+  <!-- Apply the texture to the bhakhri shape -->
+  <path d="M 50,10
+           C 35,12 20,28 20,45
+           C 20,62 35,78 50,80
+           C 65,78 80,62 80,45
+           C 80,28 65,12 50,10
+           Z"
+        fill="url(#bhakhriTexture)" fill-opacity="0.7" />
+
+  <!-- Add some burn spots -->
+  <circle cx="40" cy="30" r="2" fill="rgba(139,69,19,0.5)" />
+  <circle cx="60" cy="50" r="1.5" fill="rgba(139,69,19,0.5)" />
+  <circle cx="50" cy="65" r="2.2" fill="rgba(139,69,19,0.5)" />
+  <circle cx="35" cy="55" r="1.8" fill="rgba(139,69,19,0.5)" />
+  <circle cx="70" cy="40" r="1.3" fill="rgba(139,69,19,0.5)" />
+
+  <!-- Create the rotating animation -->
+  <animateTransform 
+    attributeName="transform" 
+    attributeType="XML" 
+    type="rotate" 
+    from="0 50 50" 
+    to="360 50 50" 
+    dur="2s" 
+    repeatCount="indefinite"/>
+</svg>
