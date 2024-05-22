@@ -1,45 +1,66 @@
-<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient definition for a more realistic look -->
   <defs>
-    <!-- Define a texture pattern for the bhakhri -->
-    <pattern id="bhakhriTexture" patternUnits="userSpaceOnUse" width="10" height="10">
-      <circle cx="2" cy="2" r="0.5" fill="rgba(139,69,19,0.3)" />
-      <circle cx="8" cy="8" r="0.7" fill="rgba(139,69,19,0.4)" />
-      <circle cx="5" cy="5" r="0.6" fill="rgba(139,69,19,0.35)" />
-    </pattern>
+    <radialGradient id="bhakhriGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A67C00;stop-opacity:1" />
+    </radialGradient>
   </defs>
-
-  <!-- Bhakhri base shape with an uneven edge -->
-  <path d="M 50,10
-           C 35,12 20,28 20,45
-           C 20,62 35,78 50,80
-           C 65,78 80,62 80,45
-           C 80,28 65,12 50,10
-           Z"
-        fill="#F5DEB3" stroke="#D2B48C" stroke-width="1" />
-
-  <!-- Apply the texture to the bhakhri shape -->
-  <path d="M 50,10
-           C 35,12 20,28 20,45
-           C 20,62 35,78 50,80
-           C 65,78 80,62 80,45
-           C 80,28 65,12 50,10
-           Z"
-        fill="url(#bhakhriTexture)" fill-opacity="0.7" />
-
-  <!-- Add some burn spots -->
-  <circle cx="40" cy="30" r="2" fill="rgba(139,69,19,0.5)" />
-  <circle cx="60" cy="50" r="1.5" fill="rgba(139,69,19,0.5)" />
-  <circle cx="50" cy="65" r="2.2" fill="rgba(139,69,19,0.5)" />
-  <circle cx="35" cy="55" r="1.8" fill="rgba(139,69,19,0.5)" />
-  <circle cx="70" cy="40" r="1.3" fill="rgba(139,69,19,0.5)" />
-
-  <!-- Create the rotating animation -->
-  <animateTransform 
-    attributeName="transform" 
-    attributeType="XML" 
-    type="rotate" 
-    from="0 50 50" 
-    to="360 50 50" 
-    dur="2s" 
-    repeatCount="indefinite"/>
+  
+  <!-- Outer circle for the Bhakhri with gradient fill and rotation animation -->
+  <g>
+    <circle cx="150" cy="150" r="140" fill="url(#bhakhriGradient)" stroke="#8B5A00" stroke-width="5">
+      <animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150" dur="5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Inner texture spots to simulate Bhakhri's appearance -->
+  <circle cx="100" cy="100" r="10" fill="#8B5A00" opacity="0.7">
+    <animate attributeName="r" values="10;12;10" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;0.5;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="130" cy="150" r="8" fill="#8B5A00" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.4;0.6" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="180" cy="120" r="12" fill="#8B5A00" opacity="0.5">
+    <animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.5;0.3;0.5" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="220" cy="180" r="10" fill="#8B5A00" opacity="0.7">
+    <animate attributeName="r" values="10;12;10" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;0.5;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="150" cy="200" r="8" fill="#8B5A00" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.4;0.6" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="80" cy="180" r="12" fill="#8B5A00" opacity="0.5">
+    <animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.5;0.3;0.5" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="190" cy="220" r="10" fill="#8B5A00" opacity="0.7">
+    <animate attributeName="r" values="10;12;10" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;0.5;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="160" cy="60" r="8" fill="#8B5A00" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.4;0.6" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="50" cy="150" r="10" fill="#8B5A00" opacity="0.5">
+    <animate attributeName="r" values="10;12;10" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.5;0.3;0.5" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="250" cy="100" r="8" fill="#8B5A00" opacity="0.6">
+    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.4;0.6" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="200" cy="80" r="12" fill="#8B5A00" opacity="0.5">
+    <animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.5;0.3;0.5" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="100" cy="220" r="10" fill="#8B5A00" opacity="0.7">
+    <animate attributeName="r" values="10;12;10" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;0.5;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
 </svg>
