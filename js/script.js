@@ -39,7 +39,7 @@
       .addEventListener("submit", function (e) {
         e.preventDefault(); // Prevent the default form submission
 
-        // Get the input value
+        // Get the input value                   
         var inputText = document.getElementById("whatsappInput").value;
 
         // Encode the input text for use in the URL
