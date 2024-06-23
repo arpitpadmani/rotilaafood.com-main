@@ -1046,7 +1046,7 @@
 =============================================
 ***/
 
-animation2{
+@-webkit-keyframes animation2{
 		0%{
 			-webkit-transform:rotateY(0deg);
 			transform:rotateY(0deg)
